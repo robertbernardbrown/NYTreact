@@ -3,22 +3,20 @@ import logo from "./logo.svg";
 import Footer from "./components/Footer"
 import "./App.css";
 import Wrapper from "./components/Wrapper";
+import Header from "./components/Header"
 
 class App extends Component {
   render() {
     return (
-      <Wrapper>
-        <div className="App">
-          <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>Welcome to React</h2>
-          </div>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-          <Footer/>
-        </div>
-      </Wrapper>
+      <div className="app">
+        <Header/>
+        <Wrapper>
+            <p className="App-intro">
+              To get started, edit <code>src/App.js</code> and save to reload.
+            </p>
+        </Wrapper>
+        <Footer/>
+      </div>
     );
   }
 }
