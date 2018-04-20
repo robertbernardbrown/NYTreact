@@ -10,5 +10,14 @@ export default {
                 'end_date'  : end
             }
         })
+    },
+    saveArticle: (data) => {
+        return axios.post("/api/articles", data);
+    },
+    getSavedArticles: () => {
+        return axios.get("/api/articles");
+    },
+    deleteSavedArticle: (id) => {
+        return axios.delete("/api/articles/" + id);
     }
 }

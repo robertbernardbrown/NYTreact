@@ -9,7 +9,10 @@ class Home extends Component {
     topic: "",
     startYear: "",
     endYear: "",
-    articles: []
+    articles: [],
+    title: "",
+    date: "",
+    url: "",
   }
 
   fetchArticles = (event) => {
@@ -28,11 +31,21 @@ class Home extends Component {
     })
   }
 
+  saveArticle = (event) => {
+    event.preventDefault();
+    API.saveArticle({
+      title: event.target.dataset.title,
+      date: event.target.dataset.date,
+      url: event.target.dataset.url,
+    })
+    .catch(err=> { console.log(err)})
+  }
+
   render() {
     return (
       <div>
         <Search handleInputChange={this.handleInputChange} fetchArticles={this.fetchArticles}/>
-        <Results articles={this.state.articles}/>
+        <Results articles={this.state.articles} saveArticle={this.saveArticle}/>
       </div>
     );
   }
