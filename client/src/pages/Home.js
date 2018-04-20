@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Search from "../components/Search";
+import Results from "../components/ResultsPanel";
 import API from "../utils/API";
 
 class Home extends Component {
@@ -29,7 +30,10 @@ class Home extends Component {
 
   render() {
     return (
-      <Search handleInputChange={this.handleInputChange} fetchArticles={this.fetchArticles}/>
+      <div>
+        <Search handleInputChange={this.handleInputChange} fetchArticles={this.fetchArticles}/>
+        <Results articles={this.state.articles}/>
+      </div>
     );
   }
 }
