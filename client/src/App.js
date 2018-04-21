@@ -12,11 +12,9 @@ const App = () => (
         <div className="app">
           <Header/>
           <Wrapper>
-          {/* <Switch> */}
             <Route path="/" component={Home} />
             <Route path="/" component={Saved} />
             <Route exact path="/saved/:id" component={Saved} />
-          {/* </Switch> */}
           </Wrapper>
           <Footer/>
         </div>
