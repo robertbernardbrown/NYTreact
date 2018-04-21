@@ -15,7 +15,7 @@ export default {
         return axios.post("/api/articles", data);
     },
     getSavedArticles: () => {
-        return axios.get("/api/articles");
+        return axios.get("/api/articles")
     },
     deleteSavedArticle: (id) => {
         return axios.delete("/api/articles/" + id);

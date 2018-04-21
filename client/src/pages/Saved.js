@@ -10,10 +10,9 @@ class Saved extends Component {
 
   componentDidMount() {
     API.getSavedArticles()
-    .then(data=> {
-        console.log(data);
+    .then(res=> {
         this.setState({
-            articles: data
+            articles: res.data
         })
     })
     .catch(err => console.log(err))    

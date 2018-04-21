@@ -10,7 +10,12 @@ const SavedPanel = (props) => (
             {!props.articles.length ? <h1>No results to display</h1> :
                 props.articles.map((cur, i) => {
                     return (
-                        <div>{i}</div>
+                        <div key={cur._id}>
+                            <h1>{cur.title}</h1>
+                            <p>{cur.date}</p>
+                            <p>{cur.dateAccessed}</p>
+                            <p>{cur.url}</p>
+                        </div>
                     )
                 })
             }
