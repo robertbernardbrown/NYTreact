@@ -5,6 +5,7 @@ import Footer from "./components/Footer"
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import Saved from "./pages/Saved";
 
 const App = () => (
       <Router>
@@ -13,7 +14,7 @@ const App = () => (
           <Wrapper>
           <Switch>
             <Route path="/" component={Home} />
-            {/* <Route path="/saved" component={} /> */}
+            <Route path="/saved" component={Saved} />
           </Switch>
           </Wrapper>
           <Footer/>
