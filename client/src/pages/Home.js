@@ -9,10 +9,7 @@ class Home extends Component {
     topic: "",
     startYear: "",
     endYear: "",
-    articles: [],
-    title: "",
-    date: "",
-    url: "",
+    articles: []
   }
 
   fetchArticles = (event) => {

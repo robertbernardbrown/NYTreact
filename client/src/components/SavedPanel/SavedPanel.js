@@ -12,9 +12,10 @@ const SavedPanel = (props) => (
                     return (
                         <div key={cur._id}>
                             <h1>{cur.title}</h1>
-                            <p>{cur.date}</p>
-                            <p>{cur.dateAccessed}</p>
-                            <p>{cur.url}</p>
+                            <p>Date published: {cur.date}</p>
+                            <p>Date accessed: {cur.dateAccessed}</p>
+                            <a href={cur.url} target="_blank"><p>{cur.url}</p></a>
+                            <button onClick={props.handleDelete} id={cur._id} className="btn btn-danger">Delete</button>
                         </div>
                     )
                 })

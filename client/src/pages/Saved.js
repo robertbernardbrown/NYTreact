@@ -18,9 +18,27 @@ class Saved extends Component {
     .catch(err => console.log(err))    
   }
 
+  handleDelete = (e) => {
+    API.deleteSavedArticle(e.target.id)
+    .then(res => {
+        this.loadSaved();
+    })
+    .catch(err=>{console.log(err)})
+  }
+
+  loadSaved = () => {
+    API.getSavedArticles()
+    .then(res=> {
+        this.setState({
+            articles: res.data
+        })
+    })
+    .catch(err => console.log(err)) 
+  }
+
   render() {
     return (
-      <SavedPanel articles={this.state.articles}/>
+      <SavedPanel handleDelete={this.handleDelete} articles={this.state.articles}/>
     );
   }
 }
