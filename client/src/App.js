@@ -13,8 +13,8 @@ const App = () => (
           <Header/>
           <Wrapper>
           <Switch>
-            <Route path="/" component={Home} />
-            <Route path="/saved" component={Saved} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/saved" component={Saved} />
           </Switch>
           </Wrapper>
           <Footer/>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import SavedPanel from "../components/SavedPanel"
 
 class Saved extends Component {
 
@@ -13,9 +14,7 @@ class Saved extends Component {
 
   render() {
     return (
-      <div>
-        <h1>SAVED FILE</h1>
-      </div>
+      <SavedPanel/>
     );
   }
 }

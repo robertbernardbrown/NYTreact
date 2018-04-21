@@ -7,7 +7,8 @@ const SavedPanel = (props) => (
             <h3 className="panel-title text-center">Saved Articles</h3>
         </div>
         <div className="panel-body">
-            {!props.articles.length ? <h1>No results to display</h1> :
+            <h1>Hi</h1>
+            {/* {!props.articles.length ? <h1>No results to display</h1> :
                 props.articles.map((cur, i) => {
                     return (
                         <div id={"article"+i} key={cur._id} className="article">
@@ -19,7 +20,7 @@ const SavedPanel = (props) => (
                         </div>
                     )
                 })
-            }
+            } */}
         </div>
     </div>
 )
